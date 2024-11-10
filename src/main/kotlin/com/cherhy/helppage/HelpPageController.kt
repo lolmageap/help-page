@@ -1,5 +1,7 @@
 package com.cherhy.helppage
 
+import com.cherhy.helppage.Randomizer.UUID
+import com.cherhy.helppage.Randomizer.uuid
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
@@ -13,10 +15,11 @@ class HelpPageController(
         model: Model,
     ): String {
         with(model) {
-            addAttribute(VERSION, helpPage.getVersion())
-            addAttribute(URL, helpPage.getUrl())
-            addAttribute(CONTACT, helpPage.getContact())
-            addAttribute(PAGE_DETAIL, helpPage.getPageDetail())
+            addAttribute(VERSION, helpPage.version)
+            addAttribute(URL, helpPage.url)
+            addAttribute(CONTACT, helpPage.contact)
+            addAttribute(PAGE_DETAIL, helpPage.pageDetail)
+            addAttribute(UUID, uuid)
         }
         return "help"
     }
