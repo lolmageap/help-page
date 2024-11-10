@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: help-page
+help:
+  version: 1.0.0
+  url: /help-me
+  contact:
+    email: ekxk1234@naver.com
+  page-detail:
+    title: Help Page
+    description: This is a help page for the application.
+    backgroundColour: #f0f0f0
+    fontColour: #000000
+    fontSize: 16
+    fontFamily: Arial
