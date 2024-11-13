@@ -1,11 +1,18 @@
 spring:
   application:
     name: help-page
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
 help:
   version: 1.0.0
   url: /help-me
-  contact:
-    email: ekxk1234@naver.com
   page-detail:
     title: Help Page
     description: This is a help page for the application.
@@ -13,3 +20,8 @@ help:
     fontColour: #000000
     fontSize: 16
     fontFamily: Arial
+  create-table: true
+#  authentification:
+logging:
+  level:
+    sql: debug

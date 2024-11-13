@@ -6,13 +6,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 data class DefaultHelpPageProperties(
     val version: String = "1.0.0",
     val url: String = "/help",
-    val contact: Contact,
+    val createTable: Boolean = false,
     val pageDetail: PageDetail = PageDetail(),
-)
-
-@ConfigurationProperties(prefix = "help.contact")
-data class Contact(
-    val email: String,
 )
 
 @ConfigurationProperties(prefix = "help.page-detail")
