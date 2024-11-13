@@ -19,6 +19,8 @@ repositories {
 }
 
 dependencies {
+    runtimeOnly("com.h2database:h2")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
     compileOnly("org.jetbrains.kotlin:kotlin-reflect")
     compileOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
     compileOnly("org.springframework.boot:spring-boot-starter-web")
